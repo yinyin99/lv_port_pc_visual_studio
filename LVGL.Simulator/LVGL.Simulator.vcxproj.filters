@@ -699,6 +699,25 @@
     </ClInclude>
     <ClInclude Include="lv_conf.h" />
     <ClInclude Include="lv_drv_conf.h" />
+    <ClInclude Include="lv_yinyin.h" />
+    <ClInclude Include="ui.h">
+      <Filter>yinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_events.h">
+      <Filter>yinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_helpers.h">
+      <Filter>yinyin</Filter>
+    </ClInclude>
+    <ClInclude Include="Expert.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertMode.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpertModeRPM.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="LVGL.Simulator.manifest" />
@@ -2050,6 +2069,25 @@
       <Filter>lv_drivers</Filter>
     </ClCompile>
     <ClCompile Include="LVGL.Simulator.cpp" />
+    <ClCompile Include="lv_yinyin.c" />
+    <ClCompile Include="ui_Screen1.c">
+      <Filter>yinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="ui.cpp">
+      <Filter>yinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_comp_hook.c">
+      <Filter>yinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_helpers.c">
+      <Filter>yinyin</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertMode.cpp">
+      <Filter>yinyin\Expert</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpertModeRPM.cpp">
+      <Filter>yinyin\Expert</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LVGL.Simulator.rc" />
@@ -6944,6 +6982,12 @@
     </Filter>
     <Filter Include="lv_drivers\win32drv">
       <UniqueIdentifier>{46dd1f5b-c62e-4ac6-98e3-a5ae1ef6ce82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="yinyin">
+      <UniqueIdentifier>{5ada1bd2-8f57-40ae-bc86-382088758388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="yinyin\Expert">
+      <UniqueIdentifier>{a3a79b71-8f71-4b25-a200-ba467945cc97}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -25,6 +25,7 @@
 #include "lvgl/examples/lv_examples.h"
 #include "lvgl/demos/lv_demos.h"
 #include "lv_drivers/win32drv/win32drv.h"
+#include "lv_yinyin.h"
 
 #if _MSC_VER >= 1200
 // Restore compilation warnings.
@@ -38,8 +39,8 @@ bool single_display_mode_initialization()
     if (!lv_win32_init(
         GetModuleHandleW(NULL),
         SW_SHOW,
-        800,
-        480,
+        240,
+        240,
         LoadIconW(GetModuleHandleW(NULL), MAKEINTRESOURCE(IDI_LVGL))))
     {
         return false;
@@ -170,150 +171,15 @@ int main()
         return -1;
     }
 
-    /*if (!multiple_display_mode_initialization())
-    {
-        return -1;
-    }
-    else
-    {
-        for (size_t i = 0; i < LVGL_SIMULATOR_MAXIMUM_DISPLAYS; ++i)
-        {
-            lv_win32_window_context_t* context = (lv_win32_window_context_t*)(
-                lv_win32_get_window_context(g_display_window_handles[i]));
-            if (context)
-            {
-                lv_disp_set_default(context->display_device_object);
-                switch (i)
-                {
-                case 0:
-                    lv_demo_widgets();
-                    break;
-                case 1:
-                    lv_demo_benchmark();
-                    break;
-                case 2:
-                    lv_example_style_1();
-                    break;
-                case 3:
-                    lv_example_get_started_1();
-                    break;
-                case 4:
-                    lv_example_anim_1();
-                    break;
-                case 5:
-                    lv_example_style_2();
-                    break;
-                case 6:
-                    lv_example_get_started_2();
-                    break;
-                case 7:
-                    lv_example_anim_2();
-                    break;
-                case 8:
-                    lv_example_style_3();
-                    break;
-                case 9:
-                    lv_example_get_started_3();
-                    break;
-                case 10:
-                    lv_example_anim_3();
-                    break;
-                case 11:
-                    lv_example_style_4();
-                    break;
-                case 12:
-                    lv_example_style_5();
-                    break;
-                case 13:
-                    lv_example_style_6();
-                    break;
-                case 14:
-                    lv_example_imgfont_1();
-                    break;
-                case 15:
-                    lv_example_style_7();
-                    break;
-                default:
-                    break;
-                }
-            }
-        }
-    }*/
-
-    //lv_win32_window_context_t* context = (lv_win32_window_context_t*)(
-    //    lv_win32_get_window_context(g_display_window_handles[1]));
-    //if (context)
-    //{
-    //    lv_obj_t* scr = lv_disp_get_scr_act(context->display_device_object);
-
-    //    /*Create a slider in the center of the display*/
-    //    lv_obj_t* slider = lv_slider_create(scr);
-    //    lv_obj_set_width(slider, 200);                          /*Set the width*/
-    //    lv_obj_center(slider);                                  /*Align to the center of the parent (screen)*/
-    //    lv_obj_add_event_cb(slider, slider_event_cb, LV_EVENT_VALUE_CHANGED, NULL);     /*Assign an event function*/
-
-    //    /*Create a label above the slider*/
-    //    label = lv_label_create(scr);
-    //    lv_label_set_text(label, "0");
-    //    lv_obj_align_to(label, slider, LV_ALIGN_OUT_TOP_MID, 0, -15);    /*Align top of the slider*/
-    //}
-
-    /*
-     * Demos, benchmarks, and tests.
-     *
-     * Uncomment any one (and only one) of the functions below to run that
-     * item.
-     */
-
-    // ----------------------------------
-    // my freetype application
-    // ----------------------------------
-
-    ///*Init freetype library
-    // *Cache max 64 faces and 1 size*/
-    //lv_freetype_init(64, 1, 0);
-
-    ///*Create a font*/
-    //static lv_ft_info_t info;
-    //info.name = "./lvgl/src/extra/libs/freetype/arial.ttf";
-    //info.weight = 36;
-    //info.style = FT_FONT_STYLE_NORMAL;
-    //lv_ft_font_init(&info);
-
-    ///*Create style with the new font*/
-    //static lv_style_t style;
-    //lv_style_init(&style);
-    //lv_style_set_text_font(&style, info.font);
-
-    ///*Create a label with the new style*/
-    //lv_obj_t* label = lv_label_create(lv_scr_act());
-    //lv_obj_add_style(label, &style, 0);
-    //lv_label_set_text(label, "FreeType Arial Test");
-
-    // ----------------------------------
-    // my Win32 filesystem driver application
-    // ----------------------------------
-
-    /*::lv_fs_win32_init();
-
-    lv_fs_dir_t d;
-    if (lv_fs_dir_open(&d, "/") == LV_FS_RES_OK)
-    {
-        char b[MAX_PATH];
-        memset(b, 0, MAX_PATH);
-        while (lv_fs_dir_read(&d, b) == LV_FS_RES_OK)
-        {
-            printf("%s\n", b);
-        }
-
-        lv_fs_dir_close(&d);
-    }*/
-
+    //lv_example_dropdown_3();
+    //lv_example_scroll_6();
+    lv_yinyin_demo();
+    //lv_example_canvas_2();
     // ----------------------------------
     // Demos from lv_examples
     // ----------------------------------
 
-    lv_demo_widgets();           // ok
+    //lv_demo_widgets();           // ok
     //lv_demo_benchmark();
     // lv_demo_keypad_encoder();    // ok
     // lv_demo_music();             // removed from repository
@@ -330,8 +196,8 @@ int main()
      * Look in that directory to find all the rest.
      */
 
-    // lv_ex_get_started_1();
-    // lv_ex_get_started_2();
+    // lv_example_get_started_1();
+    // lv_example_get_started_2();
     // lv_ex_get_started_3();
 
     // lv_example_flex_1();
@@ -465,9 +331,9 @@ int main()
     // ----------------------------------
     // Task handler loop
     // ----------------------------------
-
     while (!lv_win32_quit_signal)
     {
+        lv_yinyin_update();
         lv_task_handler();
         Sleep(1);
     }

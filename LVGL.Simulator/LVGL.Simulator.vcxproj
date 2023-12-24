@@ -260,7 +260,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\wayland.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\win32drv\win32drv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\win_drv.h" />
+    <ClInclude Include="Expert.h" />
+    <ClInclude Include="ExpertMode.h" />
+    <ClInclude Include="ExpertModeRPM.h" />
     <ClInclude Include="lv_conf.h" />
+    <ClInclude Include="ui.h" />
+    <ClInclude Include="ui_events.h" />
+    <ClInclude Include="ui_helpers.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lv_drv_conf.h" />
@@ -269,6 +275,7 @@
     <Manifest Include="LVGL.Simulator.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="lv_yinyin.h" />
     <ClInclude Include="Mile.Project.Properties.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
@@ -720,7 +727,14 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\wayland.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\win32drv\win32drv.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\win_drv.c" />
+    <ClCompile Include="ExpertMode.cpp" />
+    <ClCompile Include="ExpertModeRPM.cpp" />
     <ClCompile Include="LVGL.Simulator.cpp" />
+    <ClCompile Include="lv_yinyin.c" />
+    <ClCompile Include="ui.cpp" />
+    <ClCompile Include="ui_comp_hook.c" />
+    <ClCompile Include="ui_helpers.c" />
+    <ClCompile Include="ui_Screen1.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LVGL.Simulator.rc" />

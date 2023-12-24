@@ -5,6 +5,22 @@
 
 #include "ui.h"
 
+void initDropdownOptions(void) {
+    int i = 0;
+
+    // CLEAR
+    lv_dropdown_clear_options(ui_Dropdown1);
+
+    lv_dropdown_add_option(ui_Dropdown1, "Vitesse", i++);
+    lv_dropdown_add_option(ui_Dropdown1, "Temp. Eau", i++);
+    lv_dropdown_add_option(ui_Dropdown1, "Voltage", i++);
+    lv_dropdown_add_option(ui_Dropdown1, "Absolute Pressure", i++);
+    lv_dropdown_add_option(ui_Dropdown1, "RPM", i++);
+
+    // Choose the preselected option
+    lv_dropdown_set_selected(ui_Dropdown1, 1);
+}
+
 void ui_Screen1_screen_init(void)
 {
     ui_Screen1 = lv_obj_create(NULL);
@@ -21,9 +37,7 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_style_radius(ui_Panel1, LV_RADIUS_CIRCLE, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Dropdown1 = lv_dropdown_create(ui_Screen1);
-    lv_dropdown_set_options(ui_Dropdown1, "Vitesse\nTemp. EAU\nVoltage");
-    lv_dropdown_add_option(ui_Dropdown1, "Absolute Pressure", 3);
-    lv_dropdown_add_option(ui_Dropdown1, "RPM", 4);
+    initDropdownOptions();
     lv_obj_set_width(ui_Dropdown1, lv_pct(50)); // 50
     lv_obj_set_height(ui_Dropdown1, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_x(ui_Dropdown1, 0);

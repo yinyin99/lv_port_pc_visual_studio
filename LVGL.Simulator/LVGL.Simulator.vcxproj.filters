@@ -715,8 +715,11 @@
     <ClInclude Include="ExpertMode.h">
       <Filter>yinyin\Expert</Filter>
     </ClInclude>
-    <ClInclude Include="ExpertModeRPM.h">
+    <ClInclude Include="RPM.h">
       <Filter>yinyin\Expert</Filter>
+    </ClInclude>
+    <ClInclude Include="ELMduino.h">
+      <Filter>ELMduino</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2069,7 +2072,7 @@
       <Filter>lv_drivers</Filter>
     </ClCompile>
     <ClCompile Include="LVGL.Simulator.cpp" />
-    <ClCompile Include="lv_yinyin.c" />
+    <ClCompile Include="lv_yinyin.cpp" />
     <ClCompile Include="ui_Screen1.c">
       <Filter>yinyin</Filter>
     </ClCompile>
@@ -2085,8 +2088,11 @@
     <ClCompile Include="ExpertMode.cpp">
       <Filter>yinyin\Expert</Filter>
     </ClCompile>
-    <ClCompile Include="ExpertModeRPM.cpp">
+    <ClCompile Include="RPM.cpp">
       <Filter>yinyin\Expert</Filter>
+    </ClCompile>
+    <ClCompile Include="ELMduino.cpp">
+      <Filter>ELMduino</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -6105,6 +6111,48 @@
       <Filter>lv_drivers\wayland</Filter>
     </None>
     <None Include="freetype.props" />
+    <None Include="examples\Arduino_hardware_serial_test\Arduino_hardware_serial_test.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\Arduino_software_serial_test\Arduino_software_serial_test.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_Bluetooth_Serial\ESP32_Bluetooth_Serial.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_Check_DTC\ESP32_Check_DTC.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_Check_MIL\ESP32_Check_MIL.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_Check_Voltage\ESP32_Check_Voltage.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_CheckPIDs_1_20\ESP32_CheckPIDs_1_20.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_dual_core\ESP32_dual_core.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_Reset_DTC\ESP32_Reset_DTC.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_test\ESP32_test.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP32_WiFi\ESP32_WiFi.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP8266_test\ESP8266_test.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\ESP8266_WiFi\ESP8266_WiFi.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
+    <None Include="examples\multiple_pids\multiple_pids.ino">
+      <Filter>ELMduino\examples</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="freetype">
@@ -6988,6 +7036,12 @@
     </Filter>
     <Filter Include="yinyin\Expert">
       <UniqueIdentifier>{a3a79b71-8f71-4b25-a200-ba467945cc97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ELMduino">
+      <UniqueIdentifier>{874ff909-cbab-4167-9551-114a2d837503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ELMduino\examples">
+      <UniqueIdentifier>{b051eb8f-3a4d-4130-b44b-5fbb29500c88}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

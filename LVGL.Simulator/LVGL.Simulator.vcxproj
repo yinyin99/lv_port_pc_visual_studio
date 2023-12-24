@@ -260,9 +260,10 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\wayland.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\win32drv\win32drv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\win_drv.h" />
+    <ClInclude Include="ELMduino.h" />
     <ClInclude Include="Expert.h" />
     <ClInclude Include="ExpertMode.h" />
-    <ClInclude Include="ExpertModeRPM.h" />
+    <ClInclude Include="RPM.h" />
     <ClInclude Include="lv_conf.h" />
     <ClInclude Include="ui.h" />
     <ClInclude Include="ui_events.h" />
@@ -727,10 +728,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\wayland.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\win32drv\win32drv.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\win_drv.c" />
+    <ClCompile Include="ELMduino.cpp" />
     <ClCompile Include="ExpertMode.cpp" />
-    <ClCompile Include="ExpertModeRPM.cpp" />
+    <ClCompile Include="RPM.cpp" />
     <ClCompile Include="LVGL.Simulator.cpp" />
-    <ClCompile Include="lv_yinyin.c" />
+    <ClCompile Include="lv_yinyin.cpp" />
     <ClCompile Include="ui.cpp" />
     <ClCompile Include="ui_comp_hook.c" />
     <ClCompile Include="ui_helpers.c" />
@@ -2079,6 +2081,20 @@
     <None Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\.gitignore" />
     <None Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\CMakeLists.txt" />
     <None Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\README.md" />
+    <None Include="examples\Arduino_hardware_serial_test\Arduino_hardware_serial_test.ino" />
+    <None Include="examples\Arduino_software_serial_test\Arduino_software_serial_test.ino" />
+    <None Include="examples\ESP32_Bluetooth_Serial\ESP32_Bluetooth_Serial.ino" />
+    <None Include="examples\ESP32_CheckPIDs_1_20\ESP32_CheckPIDs_1_20.ino" />
+    <None Include="examples\ESP32_Check_DTC\ESP32_Check_DTC.ino" />
+    <None Include="examples\ESP32_Check_MIL\ESP32_Check_MIL.ino" />
+    <None Include="examples\ESP32_Check_Voltage\ESP32_Check_Voltage.ino" />
+    <None Include="examples\ESP32_dual_core\ESP32_dual_core.ino" />
+    <None Include="examples\ESP32_Reset_DTC\ESP32_Reset_DTC.ino" />
+    <None Include="examples\ESP32_test\ESP32_test.ino" />
+    <None Include="examples\ESP32_WiFi\ESP32_WiFi.ino" />
+    <None Include="examples\ESP8266_test\ESP8266_test.ino" />
+    <None Include="examples\ESP8266_WiFi\ESP8266_WiFi.ino" />
+    <None Include="examples\multiple_pids\multiple_pids.ino" />
     <None Include="freetype.props" />
   </ItemGroup>
   <Import Project="Mile.Project.Windows.Legacy\Mile.Project.Cpp.targets" />

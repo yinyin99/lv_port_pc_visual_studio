@@ -7,7 +7,7 @@
 #include "ui_helpers.h"
 #include "lv_yinyin.h"
 #include "ExpertMode.h"
-#include "ExpertModeRPM.h"
+#include "RPM.h"
 #include <cstdio>
 
 
@@ -36,11 +36,7 @@ lv_obj_t* ui____initial_actions0;
 
 void ui_update(void)
 {
-    /*if (ID_SPEED == lv_dropdown_get_selected(ui_Dropdown1)) lv_label_set_text_fmt(ui_Label1, "%u", getSpeed());
-    else if (ID_VOLTAGE == lv_dropdown_get_selected(ui_Dropdown1)) lv_label_set_text_fmt(ui_Label1, "%.1fv", 13.7);
-    else if (ID_TEMP_WATER == lv_dropdown_get_selected(ui_Dropdown1)) lv_label_set_text_fmt(ui_Label1, "%u°C", 82);
-    else if (ID_RPM == lv_dropdown_get_selected(ui_Dropdown1)) lv_label_set_text_fmt(ui_Label1, "%u", getRPM());*/
-    ExpertMode* e1 = new ExpertModeRPM();
+    ExpertMode* e1 = new RPM();
     e1->solve(ui_Dropdown1, ui_Label1);
 }
 

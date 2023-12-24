@@ -6,21 +6,32 @@ extern "C" {
 
 #include "lvgl/lvgl.h"
 
-#define ID_SPEED 0
-#define ID_TEMP_WATER 1
-#define ID_VOLTAGE 2
-#define ID_ABSOLUTE_PRESSURE 3
-#define ID_RPM 4
 
-    static uint32_t speed = 100;
-    static uint32_t rpm = 850;
-    
-    uint32_t getSpeed(void);
-    uint32_t getRPM(void);
+    ///////////////////// VARIABLES ////////////////////
+    static int32_t _kph;
+    static float _coolantTemp;
+    static float _rpm;
+    static float _voltage;
+    static uint8_t _absolutePressure;
 
+    ///////////////////// GETTERS ////////////////////
+    int32_t getKPH(void);
+    float getCoolantTemp(void);
+    float getRPM(void);
+    float getVoltage(void);
+    uint8_t getAbsolutePressure(void);
 
+    ///////////////////// SETTERS ////////////////////
+    void setKph(uint32_t kph);
+    void setCoolantTemp(float coolantTemp);
+    void setRPM(float rpm);
+    void setVoltage(float voltage);
+    void setAbsolutePressure(uint8_t absolutePressure);
+
+    ///////////////////// FUNCTIONS ////////////////////
     void lv_yinyin_demo(void);
     void lv_yinyin_update(void);
+    void obd2_values_update(void);
 
 
 #ifdef __cplusplus

@@ -1,13 +1,10 @@
-﻿#ifndef _LV_YINYIN
-#define _LV_YINYIN
-#ifdef __cplusplus
-extern "C" {
-#endif
-
+﻿#pragma once
 #include "lvgl/lvgl.h"
 
 
+class lv_yinyin {
     ///////////////////// VARIABLES ////////////////////
+private:
     static int32_t _kph;
     static float _coolantTemp;
     static float _rpm;
@@ -15,27 +12,23 @@ extern "C" {
     static uint8_t _absolutePressure;
 
     ///////////////////// GETTERS ////////////////////
-    int32_t getKPH(void);
-    float getCoolantTemp(void);
-    float getRPM(void);
-    float getVoltage(void);
-    uint8_t getAbsolutePressure(void);
+public:
+    static int32_t getKPH(void);
+    static float getCoolantTemp(void);
+    static float getRPM(void);
+    static float getVoltage(void);
+    static uint8_t getAbsolutePressure(void);
 
     ///////////////////// SETTERS ////////////////////
-    void setKph(uint32_t kph);
-    void setCoolantTemp(float coolantTemp);
-    void setRPM(float rpm);
-    void setVoltage(float voltage);
-    void setAbsolutePressure(uint8_t absolutePressure);
+    static void setKph(uint32_t kph);
+    static void setCoolantTemp(float coolantTemp);
+    static void setRPM(float rpm);
+    static void setVoltage(float voltage);
+    static void setAbsolutePressure(uint8_t absolutePressure);
 
     ///////////////////// FUNCTIONS ////////////////////
-    void lv_yinyin_demo(void);
-    void lv_yinyin_update(void);
-    void obd2_values_update(void);
+    static void lv_yinyin_demo(void);
+    static void lv_yinyin_update(void);
+    static void obd2_values_update(void);
 
-
-#ifdef __cplusplus
-} /*extern "C"*/
-#endif
-
-#endif /*_LV_YINYIN*/
+};

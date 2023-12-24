@@ -7,45 +7,52 @@
 #define CANVAS_WIDTH  240
 #define CANVAS_HEIGHT  240
 
+///////////////////// VARIABLES ////////////////////
+int32_t lv_yinyin::_kph;
+float lv_yinyin::_coolantTemp;
+float lv_yinyin::_rpm;
+float lv_yinyin::_voltage;
+uint8_t lv_yinyin::_absolutePressure;
+
 ///////////////////// GETTERS ////////////////////
-int32_t getKPH(void) {
+int32_t lv_yinyin::getKPH(void) {
     return _kph;
 }
 
-float getCoolantTemp(void) {
+float lv_yinyin::getCoolantTemp(void) {
     return _coolantTemp;
 }
 
-float getRPM(void) {
+float lv_yinyin::getRPM(void) {
     return _rpm;
 }
 
-float getVoltage(void) {
+float lv_yinyin::getVoltage(void) {
     return _voltage;
 }
 
-uint8_t getAbsolutePressure(void) {
+uint8_t lv_yinyin::getAbsolutePressure(void) {
     return _absolutePressure;
 }
 
 ///////////////////// SETTERS ////////////////////
-void setKph(uint32_t kph) {
+void lv_yinyin::setKph(uint32_t kph) {
     _kph = kph;
 }
 
-void setCoolantTemp(float coolantTemp) {
+void lv_yinyin::setCoolantTemp(float coolantTemp) {
     _coolantTemp = coolantTemp;
 }
 
-void setRPM(float rpm) {
+void lv_yinyin::setRPM(float rpm) {
     _rpm = rpm;
 }
 
-void setVoltage(float voltage) {
+void lv_yinyin::setVoltage(float voltage) {
     _voltage = voltage;
 }
 
-void setAbsolutePressure(uint8_t absolutePressure) {
+void lv_yinyin::setAbsolutePressure(uint8_t absolutePressure) {
     _absolutePressure = absolutePressure;
 }
 
@@ -62,7 +69,7 @@ void processValue(ELM327& myELM327, T(ELM327::* func)(), T& result) {
     }
 }
 
-void obd2_values_update(void) {
+void lv_yinyin::obd2_values_update(void) {
     ELM327 myELM327;
     processValue(myELM327, &ELM327::rpm, _rpm);
     /*float rpm = myELM327.rpm();
@@ -76,11 +83,11 @@ void obd2_values_update(void) {
     }*/
 }
 
-void lv_yinyin_demo(void) {
+void lv_yinyin::lv_yinyin_demo(void) {
     ui_init();
 }
 
-void lv_yinyin_update(void) {
+void lv_yinyin::lv_yinyin_update(void) {
     obd2_values_update();
     if (lv_obj_is_valid(ui_Label1) && lv_obj_get_screen(ui_Label1) == lv_scr_act()) {
         ui_update();

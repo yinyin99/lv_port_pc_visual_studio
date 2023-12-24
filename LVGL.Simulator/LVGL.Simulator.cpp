@@ -173,7 +173,7 @@ int main()
 
     //lv_example_dropdown_3();
     //lv_example_scroll_6();
-    lv_yinyin_demo();
+    lv_yinyin::lv_yinyin_demo();
     //lv_example_canvas_2();
     // ----------------------------------
     // Demos from lv_examples
@@ -333,7 +333,7 @@ int main()
     // ----------------------------------
     while (!lv_win32_quit_signal)
     {
-        lv_yinyin_update();
+        lv_yinyin::lv_yinyin_update();
         lv_task_handler();
         Sleep(1);
     }

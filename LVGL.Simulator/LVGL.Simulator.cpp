@@ -26,6 +26,7 @@
 #include "lvgl/demos/lv_demos.h"
 #include "lv_drivers/win32drv/win32drv.h"
 #include "lv_yinyin.h"
+#include "ELMduino.h"
 
 #if _MSC_VER >= 1200
 // Restore compilation warnings.
@@ -162,6 +163,10 @@ bool multiple_display_mode_initialization()
 //    lv_obj_align_to(label, slider, LV_ALIGN_OUT_TOP_MID, 0, -15);    /*Align top of the slider*/
 //}
 
+// ELM327
+ELM327 myELM327;
+uint8_t address[6] = { 0x28, 0x1B, 0xA6, 0x94, 0x28, 0x6E };
+
 int main()
 {
     lv_init();
@@ -171,8 +176,24 @@ int main()
         return -1;
     }
 
-    //lv_example_dropdown_3();
-    //lv_example_scroll_6();
+    // ELM327 SETUP
+    //SerialBT.setPin("1234");
+    //ELM_PORT.begin("ArduHUD", true);
+
+    //if (!ELM_PORT.connect(address))            //"OBDII" replaced by "address"
+    //{
+    //    DEBUG_PORT.println("Couldn't connect to OBD scanner - Phase 1");
+    //    while (1);
+    //}
+
+    //if (!myELM327.begin(ELM_PORT))
+    //{
+    //    Serial.println("Couldn't connect to OBD scanner - Phase 2");
+    //    while (1);
+    //}
+
+    //Serial.println("Connected to ELM327");
+    
     lv_yinyin::lv_yinyin_demo();
     //lv_example_canvas_2();
     // ----------------------------------
@@ -333,7 +354,7 @@ int main()
     // ----------------------------------
     while (!lv_win32_quit_signal)
     {
-        lv_yinyin::lv_yinyin_update();
+        lv_yinyin::lv_yinyin_update(myELM327);
         lv_task_handler();
         Sleep(1);
     }

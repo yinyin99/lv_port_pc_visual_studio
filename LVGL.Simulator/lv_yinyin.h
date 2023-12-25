@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "lvgl/lvgl.h"
+#include "ELMduino.h"
 
 
 class lv_yinyin {
@@ -28,7 +29,7 @@ public:
 
     ///////////////////// FUNCTIONS ////////////////////
     static void lv_yinyin_demo(void);
-    static void lv_yinyin_update(void);
-    static void obd2_values_update(void);
+    static void lv_yinyin_update(ELM327& myELM327);
+    static void obd2_values_update(ELM327& myELM327);
 
 };

@@ -260,7 +260,7 @@ const char * const RESET_ALL                  = "AT Z";        // General
 //-------------------------------------------------------------------------------------//
 // Class constants
 //-------------------------------------------------------------------------------------//
-const float  KPH_MPH_CONVERT       = 0.6213711922;
+const float  KPH_MPH_CONVERT       = float(0.6213711922);
 const int8_t QUERY_LEN	           = 9;
 const int8_t ELM_SUCCESS           = 0;
 const int8_t ELM_NO_RESPONSE       = 1;
@@ -281,7 +281,7 @@ typedef enum { SEND_COMMAND,
                WAITING_RESP,
                RESPONSE_RECEIVED,
                DECODED_OK,
-               ERROR } obd_cmd_states;
+               OBD_ERROR } obd_cmd_states;
 
 
 

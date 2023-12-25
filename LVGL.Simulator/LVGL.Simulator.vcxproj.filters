@@ -721,6 +721,18 @@
     <ClInclude Include="ELMduino.h">
       <Filter>ELMduino</Filter>
     </ClInclude>
+    <ClInclude Include="KPH.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
+    <ClInclude Include="ManifoldAbsolutePressure.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCoolantTemp.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
+    <ClInclude Include="BatteryVoltage.h">
+      <Filter>yinyin\Expert</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="LVGL.Simulator.manifest" />
@@ -2093,6 +2105,18 @@
     </ClCompile>
     <ClCompile Include="ELMduino.cpp">
       <Filter>ELMduino</Filter>
+    </ClCompile>
+    <ClCompile Include="KPH.cpp">
+      <Filter>yinyin\Expert</Filter>
+    </ClCompile>
+    <ClCompile Include="ManifoldAbsolutePressure.cpp">
+      <Filter>yinyin\Expert</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCoolantTemp.cpp">
+      <Filter>yinyin\Expert</Filter>
+    </ClCompile>
+    <ClCompile Include="BatteryVoltage.cpp">
+      <Filter>yinyin\Expert</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

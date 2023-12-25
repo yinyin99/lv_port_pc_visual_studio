@@ -10,7 +10,7 @@ protected :
 
 public:
     ExpertMode() : _next(nullptr) {}
-    ExpertMode(Expert* next) : _next(next) {}
+    ExpertMode(ExpertMode* next) : _next(next) {}
 
     void* solve(lv_obj_t* dropdown, lv_obj_t* label);
     virtual void* solve1(lv_obj_t* dropdown, lv_obj_t* label) = 0;

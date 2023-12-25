@@ -8,6 +8,10 @@
 #include "lv_yinyin.h"
 #include "ExpertMode.h"
 #include "RPM.h"
+#include "KPH.h"
+#include "BatteryVoltage.h"
+#include "EngineCoolantTemp.h"
+#include "ManifoldAbsolutePressure.h"
 #include <cstdio>
 
 
@@ -36,8 +40,13 @@ lv_obj_t* ui____initial_actions0;
 
 void ui_update(void)
 {
-    ExpertMode* e1 = new RPM();
-    e1->solve(ui_Dropdown1, ui_Label1);
+    ExpertMode *rpm, *kph, *voltage, *coolantTemp, *manifoldAbsolutePressure;
+    rpm = new RPM();
+    kph = new KPH(rpm);
+    voltage = new BatteryVoltage(kph);
+    coolantTemp = new EngineCoolantTemp(voltage);
+    manifoldAbsolutePressure = new ManifoldAbsolutePressure(coolantTemp);
+    manifoldAbsolutePressure->solve(ui_Dropdown1, ui_Label1);
 }
 
 ///////////////////// SCREENS ////////////////////

@@ -260,9 +260,13 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\wayland.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\win32drv\win32drv.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)lv_drivers\win_drv.h" />
+    <ClInclude Include="BatteryVoltage.h" />
     <ClInclude Include="ELMduino.h" />
+    <ClInclude Include="EngineCoolantTemp.h" />
     <ClInclude Include="Expert.h" />
     <ClInclude Include="ExpertMode.h" />
+    <ClInclude Include="KPH.h" />
+    <ClInclude Include="ManifoldAbsolutePressure.h" />
     <ClInclude Include="RPM.h" />
     <ClInclude Include="lv_conf.h" />
     <ClInclude Include="ui.h" />
@@ -728,8 +732,12 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\wayland\wayland.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\win32drv\win32drv.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)lv_drivers\win_drv.c" />
+    <ClCompile Include="BatteryVoltage.cpp" />
     <ClCompile Include="ELMduino.cpp" />
+    <ClCompile Include="EngineCoolantTemp.cpp" />
     <ClCompile Include="ExpertMode.cpp" />
+    <ClCompile Include="KPH.cpp" />
+    <ClCompile Include="ManifoldAbsolutePressure.cpp" />
     <ClCompile Include="RPM.cpp" />
     <ClCompile Include="LVGL.Simulator.cpp" />
     <ClCompile Include="lv_yinyin.cpp" />
